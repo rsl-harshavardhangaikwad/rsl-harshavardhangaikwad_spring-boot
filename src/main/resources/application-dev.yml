@@ -1,0 +1,19 @@
+# ============================================================
+# Leave Management API — Dev Profile Configuration
+# Activate with: -Dspring.profiles.active=dev
+# ============================================================
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+server:
+  port: 8080
+
+# Dev-profile logging: verbose for application code and request logging filter
+logging:
+  level:
+    root: INFO
+    com.rsl.leavemanagement: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG

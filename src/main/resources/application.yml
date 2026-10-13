@@ -1,0 +1,29 @@
+# ============================================================
+# Leave Management API — Base Configuration
+# Active profile is set via: -Dspring.profiles.active=dev
+# ============================================================
+
+spring:
+  application:
+    name: leave-management
+  profiles:
+    active: dev   # default active profile
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# Custom application properties (bound to AppProperties record)
+app:
+  name: Leave Management API
+  version: 1.0.0
+  description: HR Leave Management REST API built with Spring Boot
+  max-leave-days-per-request: 30
+
+# Logging baseline
+logging:
+  level:
+    root: WARN
+    com.rsl.leavemanagement: INFO
